@@ -1,9 +1,12 @@
 import styles from "../styles/Home.module.scss";
+import NavBar from "../components/NavBar/NavBar";
+import IntroSection from "../components/IntroSection/IntroSection";
 
 export default function Home() {
   return (
     <div className={styles.HOME}>
-      <h1>New Percy</h1>
+      <NavBar />
+      <IntroSection />
     </div>
   );
 }

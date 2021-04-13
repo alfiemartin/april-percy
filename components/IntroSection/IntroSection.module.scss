@@ -1,0 +1,9 @@
+@import "/styles/variables.scss";
+
+.INTRO {
+  height: calc(100vh - #{$navbar-height} - #{$navbar-vertical-gap});
+  margin-top: $navbar-height + $navbar-vertical-gap;
+  width: 100%;
+  background: $navbar-color;
+  color: white;
+}

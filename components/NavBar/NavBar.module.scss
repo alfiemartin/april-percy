@@ -1,0 +1,30 @@
+@import "/styles/variables.scss";
+
+.NAVBAR {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navbar-height;
+  background: $navbar-color;
+  padding: 1rem;
+}
+
+.NAVBAR,
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.leftSide,
+.rightSide {
+  width: 50%;
+}
+
+.rightSide {
+  justify-content: flex-end;
+}
