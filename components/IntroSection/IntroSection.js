@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./IntroSection.module.scss";
+import SpecialSection from "../SpecialSection/SpecialSection";
 
 const IntroSection = () => {
   return (
     <div className={styles.INTRO}>
       <div className={styles.introGrid}>
         <div className={styles.special}>
-          <h1>Special Section</h1>
+          {/* <h1>Special Section</h1> */}
+          <SpecialSection />
         </div>
         <div className={styles.about}>
           <img src="/letters.jpg" alt="Letter A" />
