@@ -6,4 +6,54 @@
   width: 100%;
   background: $navbar-color;
   color: white;
+
+  padding: 1rem;
+}
+
+.introGrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  color: black;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  & > div {
+    background: #e5e7eb;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+  }
+
+  & > .special {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+  }
+
+  & > .about {
+    grid-column: span 2 / span 2;
+  }
+
+  & > .projects {
+    grid-column: span 2 / span 2;
+  }
+
+  & > .text {
+    grid-column: span 3 / span 3;
+    background: none;
+    color: white;
+
+    padding: 2rem;
+    place-items: flex-start flex-start;
+  }
+
+  & > .contact {
+    grid-column: span 2 / span 2;
+  }
 }
