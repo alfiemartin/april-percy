@@ -1,3 +1,13 @@
 $navbar-color: hsl(221, 39%, 11%);
 $navbar-height: 80px;
 $navbar-vertical-gap: 0px;
+
+@mixin pageBasics {
+  height: calc(100vh - #{$navbar-height} - #{$navbar-vertical-gap});
+  // margin-top: $navbar-height + $navbar-vertical-gap;
+  width: 100%;
+  background: $navbar-color;
+  color: white;
+
+  padding: 1rem;
+}

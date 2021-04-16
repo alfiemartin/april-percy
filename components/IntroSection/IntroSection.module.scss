@@ -1,13 +1,8 @@
 @import "/styles/variables.scss";
 
 .INTRO {
-  height: calc(100vh - #{$navbar-height} - #{$navbar-vertical-gap});
+  @include pageBasics;
   margin-top: $navbar-height + $navbar-vertical-gap;
-  width: 100%;
-  background: $navbar-color;
-  color: white;
-
-  padding: 1rem;
 }
 
 .introGrid {
@@ -74,6 +69,15 @@
 
     padding: 2rem;
     font-size: 1rem;
+
+    & > .secondLine {
+      display: flex;
+      flex-direction: row;
+      & > img {
+        width: 50px;
+        transform: rotateZ(-50deg) translateY(60px);
+      }
+    }
   }
 
   & > .contact {
