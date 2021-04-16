@@ -10,7 +10,7 @@ const NavBar = () => {
       </div>
       <div className={styles.rightSide}>
         {/* <h1>Socials</h1> */}
-        <h1>alfie.martin@hotmail.co.uk</h1>
+        {/* <h1>alfie.martin@hotmail.co.uk</h1> */}
       </div>
     </div>
   );

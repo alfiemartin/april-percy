@@ -20,20 +20,43 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
+  font-size: 2rem;
   & > div {
     background: #e5e7eb;
     border-radius: 2px;
     width: 100%;
     height: 100%;
 
-    display: grid;
-    place-items: center;
-    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    & > .textCont {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: black;
+      top: 0;
+      left: 0;
+
+      display: grid;
+      place-items: center;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
   }
 
   & > .special {
     grid-column: span 3 / span 3;
     grid-row: span 2 / span 2;
+
+    display: grid;
+    place-items: center;
   }
 
   & > .about {
@@ -44,13 +67,13 @@
     grid-column: span 2 / span 2;
   }
 
-  & > .text {
+  & > .welcomeText {
     grid-column: span 3 / span 3;
     background: none;
     color: white;
 
     padding: 2rem;
-    place-items: flex-start flex-start;
+    font-size: 1rem;
   }
 
   & > .contact {
