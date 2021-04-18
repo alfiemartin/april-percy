@@ -2,4 +2,37 @@
 
 .ABOUT {
   @include sectionBasics;
+
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 1) 0%,
+    rgba(30, 17, 39, 1) 100%
+  );
+}
+
+.aboutGrid {
+  @include gridTemplate;
+  grid-template-columns: repeat(6, 1fr);
+
+  & > .intro {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    align-self: center;
+  }
+
+  & > .extended {
+    grid-row-start: 2;
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    align-self: flex-start;
+  }
+
+  & > .headShot {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+  }
 }

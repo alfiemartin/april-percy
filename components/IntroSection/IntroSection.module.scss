@@ -6,16 +6,9 @@
 }
 
 .introGrid {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  gap: 1rem;
-  color: black;
-
+  @include gridTemplate;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
 
-  font-size: 2rem;
   & > div {
     background: #e5e7eb;
     border-radius: 2px;

@@ -4,17 +4,20 @@ import styles from "../styles/Home.module.scss";
 import NavBar from "../components/NavBar/NavBar";
 import IntroSection from "../components/IntroSection/IntroSection";
 import AboutMe from "../components/AboutMe/AboutMe";
+import { useState } from "react";
 
 export default function Home() {
+  const [sectionState, setSectionState] = useState("Home");
+
   return (
     <>
       <Head>
         <title>Alfie Martin</title>
       </Head>
       <div className={styles.HOME}>
-        <NavBar />
+        <NavBar sectionState={sectionState} />
         <IntroSection />
-        <AboutMe />
+        <AboutMe setSectionState={setSectionState} />
       </div>
     </>
   );
