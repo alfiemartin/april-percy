@@ -19,8 +19,16 @@
 }
 
 .engineerText {
-  & > h1 {
-    // visibility: visible;
-    white-space: nowrap;
+  & > div {
+    display: flex;
+    flex-direction: row;
+
+    & > h1 {
+      visibility: hidden;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
   }
 }
