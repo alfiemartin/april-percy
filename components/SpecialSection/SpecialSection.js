@@ -31,11 +31,15 @@ const alfieMartinAnim = (alfieRef, martinRef, contRef) => {
     "<"
   );
 
-  alfieAnim.to([alfieRef.current, martinRef.current], {
-    color: "#831843",
-    duration: 0.6,
-    ease: "Power3.easeOut",
-  });
+  alfieAnim.to(
+    [alfieRef.current, martinRef.current],
+    {
+      textShadow: "3px 1px 17px rgba(17, 24, 39,.62)",
+      duration: 2.0,
+      ease: "Power3.easeInOut",
+    },
+    "<0.5"
+  );
 
   return alfieAnim;
 };
@@ -46,14 +50,19 @@ const SpecialSection = () => {
   let contRef = useRef();
 
   useEffect(() => {
-    alfieMartinAnim(alfieRef, martinRef, contRef).play();
+    const alfieMartinTimeline = alfieMartinAnim(alfieRef, martinRef, contRef);
+    alfieMartinTimeline.play();
   }, []);
 
   return (
     <div ref={contRef} className={styles.SPECIAL}>
-      <div className={styles.alfieTextCont}>
+      <div className={styles.textCont}>
         <h1 ref={alfieRef}>Alfie</h1>
         <h1 ref={martinRef}>Martin</h1>
+      </div>
+      <div className={`${styles.textCont} ${styles.engineerText}`}>
+        <h1>Web Developer</h1>
+        <h1>Electronic Engineer</h1>
       </div>
     </div>
   );

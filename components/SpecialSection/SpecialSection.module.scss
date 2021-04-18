@@ -4,13 +4,23 @@
 
   display: grid;
   place-items: center;
+  position: relative;
 }
 
-.alfieTextCont {
-  display: flex;
-  flex-direction: column;
+.textCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   & > h1 {
     visibility: hidden;
+  }
+}
+
+.engineerText {
+  & > h1 {
+    // visibility: visible;
+    white-space: nowrap;
   }
 }
