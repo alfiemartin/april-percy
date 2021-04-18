@@ -5,3 +5,12 @@
   display: grid;
   place-items: center;
 }
+
+.alfieTextCont {
+  display: flex;
+  flex-direction: column;
+
+  & > h1 {
+    visibility: hidden;
+  }
+}
