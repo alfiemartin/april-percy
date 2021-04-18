@@ -34,3 +34,25 @@
     font-size: 1rem;
   }
 }
+
+$logoLetterSpacing: 2px;
+
+.leftSide > .logo {
+  width: 55px;
+  height: 55px;
+  font-size: 12px;
+  letter-spacing: -$logoLetterSpacing;
+  padding: 5px;
+  border-radius: 50%;
+  background: #831843;
+
+  box-sizing: content-box;
+  border: 2px solid white;
+
+  display: grid;
+  place-items: center;
+
+  & > h1 {
+    margin-right: $logoLetterSpacing;
+  }
+}
