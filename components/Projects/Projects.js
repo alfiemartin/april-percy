@@ -89,7 +89,7 @@ const ChatroomCard = () => {
 const Projects = () => {
   return (
     <div className={styles.PROJECTS}>
-      <div className={styles.projectGrid}>
+      <div className={styles.projectCarousel}>
         <NeurifyCard />
         <AlbaCard />
         <RDMCard />
