@@ -5,6 +5,13 @@
   display: grid;
   place-items: center;
   position: relative;
+
+  pointer-events: none;
+
+  & h1 {
+    pointer-events: none;
+    user-select: none;
+  }
 }
 
 .textCont {

@@ -23,7 +23,7 @@ const IntroSection = () => {
           </div>
         </div>
         <div className={styles.welcomeText}>
-          <h1>Hi, Welcome to my site!</h1>
+          {/* <h1>Hi, Welcome to my site!</h1> */}
           <div className={styles.secondLine}>
             <h1>
               <br /> Take a look around
