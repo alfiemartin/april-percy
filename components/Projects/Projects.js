@@ -189,9 +189,7 @@ const Projects = () => {
         <ChatroomCard />
       </div>
       <div className={styles.messageSection}>
-        <h1>
-          Ongoing projects will be added to this list soon upon completion.{" "}
-        </h1>
+        <h1>Ongoing projects will be added to this list upon completion. </h1>
         <h2>Coming soon: Homepager (Homepage maker)</h2>
       </div>
     </div>
