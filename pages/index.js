@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar/NavBar";
 import IntroSection from "../components/IntroSection/IntroSection";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
 import { useState } from "react";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <IntroSection />
         <AboutMe setSectionState={setSectionState} />
         <Projects />
+        <Contact />
       </div>
     </>
   );

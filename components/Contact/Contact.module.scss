@@ -1,0 +1,37 @@
+@import "/styles/variables.scss";
+
+.CONTACT {
+  @include sectionBasics;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 17, 39, 1) 0%,
+    rgba(30, 17, 39, 1) 30%,
+    hsla(151, 39%, 11%, 1) 100%
+  );
+}
+
+.contactGrid {
+  @include gridTemplate;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  & > h1 {
+    color: white;
+    grid-column: span 2 / span 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    grid-row-start: 2;
+    grid-column: span 2 / span 2;
+    align-items: center;
+    justify-self: center;
+
+    & > img {
+      width: 60px;
+    }
+  }
+}
