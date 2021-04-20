@@ -6,21 +6,38 @@ const Contact = () => {
     <div className={styles.CONTACT}>
       <div className={styles.contactGrid}>
         <h1>Get In Touch</h1>
-        <div>
+        <div className={styles.linkedIn}>
           <img src="/linkedin.svg" alt="LinkedIn" />
-          <h1>LinkedIn</h1>
+          <h2>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/alfie-martin99/"
+            >
+              LinkedIn
+            </a>
+          </h2>
         </div>
-        <div>
-          <img src="/linkedin.svg" alt="LinkedIn" />
-          <h1>GitGub</h1>
+        <div className={styles.github}>
+          <img src="/github.svg" alt="LinkedIn" />
+          <h2>
+            <a target="_blank" href="https://github.com/alfiemartin">
+              Github
+            </a>
+          </h2>
         </div>
-        <div>
-          <img src="/linkedin.svg" alt="LinkedIn" />
-          <h1>07528559068</h1>
+        <div className={styles.phone}>
+          <img src="/phone-call.svg" alt="LinkedIn" />
+          <h2>
+            <a href="tel:+447528559068">07528559068</a>
+          </h2>
         </div>
-        <div>
-          <img src="/linkedin.svg" alt="LinkedIn" />
-          <h1>alfie.martin@hotmail.co.uk</h1>
+        <div className={styles.email}>
+          <img src="email.svg" alt="LinkedIn" />
+          <h2>
+            <a href="mailto:alfie.martin@hotmail.co.uk">
+              alfie.martin@hotmail.co.uk
+            </a>
+          </h2>
         </div>
       </div>
     </div>

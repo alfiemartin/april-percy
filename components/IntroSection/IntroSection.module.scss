@@ -29,7 +29,12 @@
 
       display: grid;
       place-items: center;
-      pointer-events: none;
+      // pointer-events: none;
+      cursor: pointer;
+
+      & > h1 {
+        pointer-events: none;
+      }
     }
 
     & > img {

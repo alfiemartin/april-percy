@@ -6,10 +6,25 @@ import IntroSection from "../components/IntroSection/IntroSection";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function Home() {
   const [sectionState, setSectionState] = useState("Home");
+  let aboutRef = useRef();
+  let projectsRef = useRef();
+  let contactRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (contactRef.current.getBoundingClientRect().top <= 80)
+        setSectionState("Contact");
+      else if (projectsRef.current.getBoundingClientRect().top <= 80)
+        setSectionState("Projects");
+      else if (aboutRef.current.getBoundingClientRect().top <= 80)
+        setSectionState("About");
+      else setSectionState("Home");
+    });
+  });
 
   return (
     <>
@@ -18,10 +33,20 @@ export default function Home() {
       </Head>
       <div className={styles.HOME}>
         <NavBar sectionState={sectionState} />
-        <IntroSection />
-        <AboutMe setSectionState={setSectionState} />
-        <Projects />
-        <Contact />
+        <IntroSection
+          aboutRef={aboutRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
+        />
+        <div ref={aboutRef}>
+          <AboutMe />
+        </div>
+        <div ref={projectsRef}>
+          <Projects />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
+        </div>
       </div>
     </>
   );

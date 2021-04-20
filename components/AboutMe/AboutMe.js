@@ -1,19 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "./AboutMe.module.scss";
 
-const AboutMe = ({ setSectionState }) => {
-  let aboutRef = useRef();
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (aboutRef.current.getBoundingClientRect().top <= 80)
-        setSectionState("About");
-      else setSectionState("Home");
-    });
-  });
-
+const AboutMe = () => {
   return (
-    <div ref={aboutRef} className={styles.ABOUT}>
+    <div className={styles.ABOUT}>
       <div className={styles.aboutGrid}>
         <h1 className={styles.intro}>I'm Alfie</h1>
         <p className={styles.extended}>
