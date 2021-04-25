@@ -181,6 +181,7 @@ const ChatroomCard = () => {
 const Projects = () => {
   return (
     <div className={styles.PROJECTS}>
+      <h1>Projects</h1>
       <div className={styles.projectCarousel}>
         <NeurifyCard />
         <AlbaCard />

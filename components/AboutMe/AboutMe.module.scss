@@ -16,10 +16,22 @@
 
   color: white;
 
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    font-size: 1rem;
+  }
+
   & > .intro {
     grid-column: span 2 / span 2;
     grid-column-start: 2;
     align-self: center;
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      grid-column: span 6 / span 6;
+      // justify-self: center;
+      align-self: flex-end;
+    }
   }
 
   & > .extended {
@@ -27,6 +39,10 @@
     grid-column: span 2 / span 2;
     grid-column-start: 2;
     align-self: flex-start;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   & > .headShot {
@@ -37,6 +53,13 @@
     justify-self: center;
     align-self: center;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      grid-row-start: 2;
+      grid-row-end: 2;
+      grid-column: span 6 / span 6;
+    }
   }
 
   & > .paragraph {
@@ -44,5 +67,10 @@
     grid-column-start: 2;
     grid-column-end: 6;
     font-size: 1.5rem;
+
+    @media only screen and (max-width: 768px) {
+      grid-column: span 6 / span 6;
+      grid-row-start: 3;
+    }
   }
 }

@@ -10,6 +10,11 @@ $navbar-vertical-gap: 0px;
   color: white;
 
   padding: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    padding: 0.5rem;
+  }
 }
 
 @mixin gridTemplate {

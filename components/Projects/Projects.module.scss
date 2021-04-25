@@ -4,6 +4,21 @@
   @include sectionBasics;
   background: rgba(30, 17, 39, 1);
   padding-top: 100px;
+
+  & > h1 {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 468px) {
+    /* For mobile phones: */
+    padding-top: 100px;
+    height: min-content;
+
+    & > h1 {
+      display: block;
+    }
+  }
 }
 
 .projectCarousel {
@@ -151,4 +166,11 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 3rem;
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    display: none;
+    // visibility: hidden;
+    margin-top: 0;
+  }
 }
