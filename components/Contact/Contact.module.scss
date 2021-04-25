@@ -47,12 +47,17 @@
     margin: 1.5rem 0;
 
     & > h2 {
-      font-size: 1.5em;
+      font-size: 2em;
 
       transition: all 0.5s ease-out;
       &:hover {
         color: hsl(217, 79%, 35%);
         transform: scale(1.1);
+      }
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        font-size: 1.5em;
       }
     }
 
