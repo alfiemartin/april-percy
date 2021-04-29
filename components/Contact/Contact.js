@@ -39,6 +39,12 @@ const Contact = () => {
             </a>
           </h2>
         </div>
+        <div className={styles.cv}>
+          <img src="email.svg" alt="LinkedIn" />
+          <h2>
+            <a href="/AlfieMcv.pdf">View CV</a>
+          </h2>
+        </div>
       </div>
     </div>
   );
