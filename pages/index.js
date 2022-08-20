@@ -45,7 +45,8 @@ export default function Home() {
         <NavBar sectionState={sectionState} />
         <Modal isOpen={showModal} style={{overlay: {width: "100vw", height: "100vh", display: 'grid', placeItems: 'center'}}} contentElement={() => (
           <div style={{display: 'grid', placeItems: 'center'}}>
-            <h1 style={{marginBottom: '30px'}}>New site coming soon</h1>
+            <h1>New site coming soon</h1>
+            <h2 style={{marginBottom: '30px', fontSize: 16}}>This site is ~2 years out of date</h2>
             <h2 style={{textDecoration: 'underline'}}><a href="https://portfolio-2022-zeta.vercel.app/" target="_blank">Click here to see a preview</a></h2>
             <button onClick={handleModal} style={{border: 'none', background: 'none', cursor: 'pointer'}}><h2 style={{textDecoration: 'underline'}}>Close this message</h2></button>
           </div>
